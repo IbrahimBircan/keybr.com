@@ -11,8 +11,8 @@ import { type ReactNode } from "react";
 import { useIntl } from "react-intl";
 import { NavLink } from "react-router";
 import * as styles from "./NavMenu.module.less";
-import { SubMenu } from "./SubMenu.tsx";
 import { ThemeSwitcher } from "./themes/ThemeSwitcher.tsx";
+import { mdiTrophyOutline } from "@mdi/js";
 
 export function NavMenu({ currentPath }: { readonly currentPath: string }) {
   const { publicUser } = usePageData();
@@ -21,42 +21,37 @@ export function NavMenu({ currentPath }: { readonly currentPath: string }) {
       <MenuItem>
         <AccountLink user={publicUser} />
       </MenuItem>
-
+      <MenuItem>
+        <MenuItemLink page={Pages.practice} />
+      </MenuItem>
+      <MenuItem>
+        <MenuItemLink page={Pages.typingTest} />
+      </MenuItem>
+<MenuItem>
+  <NavLink
+    className={({ isActive }) =>
+      clsx(styles.link, isActive && styles.isActive)
+    }
+    to="/katip"
+  >
+    <Icon className={styles.icon} shape={mdiTrophyOutline} />
+    <span className={styles.label}>Kâtip Sınavı</span>
+  </NavLink>
+</MenuItem>
+      <MenuItem>
+        <MenuItemLink page={Pages.multiplayer} />
+      </MenuItem>
+      <MenuItem>
+        <MenuItemLink page={Pages.highScores} />
+      </MenuItem>
+      <div className={styles.spacer} />
+      <MenuItem>
+        <MenuItemLink page={Pages.profile} />
+      </MenuItem>
       <MenuItem>
         <ThemeSwitcher />
       </MenuItem>
 
-      <MenuItem>
-        <MenuItemLink page={Pages.practice} />
-      </MenuItem>
-
-      <MenuItem>
-        <MenuItemLink page={Pages.profile} />
-      </MenuItem>
-
-      <MenuItem>
-        <MenuItemLink page={Pages.help} />
-      </MenuItem>
-
-      <MenuItem>
-        <MenuItemLink page={Pages.highScores} />
-      </MenuItem>
-
-      <MenuItem>
-        <MenuItemLink page={Pages.multiplayer} />
-      </MenuItem>
-
-      <MenuItem>
-        <MenuItemLink page={Pages.typingTest} />
-      </MenuItem>
-
-      <MenuItem>
-        <MenuItemLink page={Pages.layouts} />
-      </MenuItem>
-
-      <MenuItem>
-        <SubMenu currentPath={currentPath} />
-      </MenuItem>
     </div>
   );
 }
@@ -74,7 +69,7 @@ function AccountLink({ user }: { readonly user: AnyUser }) {
       }
       to={Pages.account.path}
     >
-      <Avatar user={user.id != null ? user : null} size="large" />
+      <Avatar user={user.id != null ? user : null} size="normal" />
       <span className={styles.userName}>
         {user.id != null
           ? user.name

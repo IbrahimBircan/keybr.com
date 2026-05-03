@@ -54,7 +54,7 @@ export function ReportScreen({ result }: { result: TestResult }) {
     <Screen>
       <Box alignItems="center" justifyContent="center">
         <Indicator
-          name="Speed"
+          name="Hız"
           value={
             <Metric
               value={formatSpeed(speed, { unit: false })}
@@ -64,7 +64,7 @@ export function ReportScreen({ result }: { result: TestResult }) {
         />
         <Separator />
         <Indicator
-          name="Accuracy"
+          name="Doğruluk"
           value={
             <Metric value={`${formatNumber(accuracy * 100, 2)}`} unit="%" />
           }
@@ -72,10 +72,10 @@ export function ReportScreen({ result }: { result: TestResult }) {
       </Box>
 
       <Para align="center">
-        <NameValue name="Characters" value={formatNumber(length)} />
-        <NameValue name="Errors" value={formatNumber(errors)} />
+        <NameValue name="Karakter" value={formatNumber(length)} />
+        <NameValue name="Hata" value={formatNumber(errors)} />
         <NameValue
-          name="Time"
+          name="Süre"
           value={formatDuration(time, { showMillis: true })}
         />
       </Para>
@@ -83,7 +83,7 @@ export function ReportScreen({ result }: { result: TestResult }) {
       <Box alignItems="center" justifyContent="center">
         <SpeedHistogram
           distribution={dSpeed}
-          thresholds={[{ label: "Speed", value: speed }]}
+          thresholds={[{ label: "Hız", value: speed }]}
           width="45rem"
           height="15rem"
         />
@@ -91,18 +91,17 @@ export function ReportScreen({ result }: { result: TestResult }) {
 
       <Para align="center">
         <Name>
-          Faster than <Value value={formatPercents(pSpeed)} /> of all other
-          people.
+          Diğer kullanıcıların <Value value={formatPercents(pSpeed)} /> kısmından daha hızlısınız.
         </Name>{" "}
         <Name>
-          You are in the top <Value value={formatPercents(top(pSpeed))} />.
+          İlk <Value value={formatPercents(top(pSpeed))} /> içindesiniz.
         </Name>
       </Para>
 
       <Box alignItems="center" justifyContent="center">
         <AccuracyHistogram
           distribution={dAccuracy}
-          thresholds={[{ label: "Accuracy", value: accuracy }]}
+          thresholds={[{ label: "Doğruluk", value: accuracy }]}
           width="45rem"
           height="15rem"
         />
@@ -110,11 +109,10 @@ export function ReportScreen({ result }: { result: TestResult }) {
 
       <Para align="center">
         <Name>
-          More accurate than <Value value={formatPercents(pAccuracy)} /> of all
-          other people.
+          Diğer kullanıcıların <Value value={formatPercents(pAccuracy)} /> kısmından daha doğrusunuz.
         </Name>{" "}
         <Name>
-          You are in the top <Value value={formatPercents(top(pAccuracy))} />.
+          İlk <Value value={formatPercents(top(pAccuracy))} /> içindesiniz.
         </Name>
       </Para>
 
@@ -126,7 +124,7 @@ export function ReportScreen({ result }: { result: TestResult }) {
         />
       </Box>
 
-      <Para align="center">Time to type a character histogram.</Para>
+      <Para align="center">Bir karakteri yazma süresi histogramı.</Para>
 
       <Box alignItems="center" justifyContent="center">
         <RollingSpeedChart
@@ -137,7 +135,7 @@ export function ReportScreen({ result }: { result: TestResult }) {
         />
       </Box>
 
-      <Para align="center">Typing speed change over time chart.</Para>
+      <Para align="center">Zaman içinde yazma hızı değişim grafiği.</Para>
 
       <Spacer size={3} />
 
@@ -149,7 +147,7 @@ export function ReportScreen({ result }: { result: TestResult }) {
         <Field.Filler />
         <Field>
           <Button
-            label="Next test"
+            label="Sonraki test"
             icon={<Icon shape={mdiSkipNext} />}
             onClick={handleNext}
           />
@@ -158,7 +156,7 @@ export function ReportScreen({ result }: { result: TestResult }) {
       </FieldList>
 
       <Para align="center">
-        Press <Kbd>Enter</Kbd> to start a new test.
+        Yeni bir test başlatmak için <Kbd>Enter</Kbd> tuşuna basın.
       </Para>
     </Screen>
   );

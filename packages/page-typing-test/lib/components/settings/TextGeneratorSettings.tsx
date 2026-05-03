@@ -9,13 +9,13 @@ export function TextGeneratorSettings() {
   const { settings, updateSettings } = useSettings();
   return (
     <>
-      <FieldSet legend="Text Settings">
-        <Para>Choose what text to type in the test.</Para>
+      <FieldSet legend="Metin Ayarları">
+        <Para>Testte yazılacak metni seçin.</Para>
 
         <FieldList>
           <Field>
             <RadioBox
-              label="Common words"
+              label="Yaygın kelimeler"
               name="text-source"
               value="text-source-common-words"
               checked={
@@ -34,7 +34,7 @@ export function TextGeneratorSettings() {
           </Field>
           <Field>
             <RadioBox
-              label="Pseudo words"
+              label="Sözde kelimeler"
               name="text-source"
               value="text-source-pseudo-words"
               checked={
@@ -53,7 +53,7 @@ export function TextGeneratorSettings() {
           </Field>
           <Field>
             <RadioBox
-              label="Book paragraphs"
+              label="Kitap paragrafları"
               name="text-source"
               value="text-source-book"
               checked={

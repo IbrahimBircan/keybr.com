@@ -135,6 +135,18 @@ export class Controller {
   async ["typing-test"](ctx: Context<RouterState & AuthState>) {
     return this.renderPage(ctx, Pages.typingTest);
   }
+  @http.GET(`${Pages.katip.path}`)
+  async ["katip"](ctx: Context<RouterState & AuthState>) {
+    return this.renderPage(ctx, Pages.katip);
+  }
+
+  @http.GET(`/{locale:${localePattern}}${Pages.katip.path}`)
+  async ["katip-i18n"](
+    ctx: Context<RouterState & AuthState>,
+    @pathParam("locale", pIntl) intl: IntlShape,
+  ) {
+    return this.renderPage(ctx, Pages.katip, intl);
+  }
 
   @http.GET(`/{locale:${localePattern}}${Pages.typingTest.path}`)
   async ["typing-test-i18n"](

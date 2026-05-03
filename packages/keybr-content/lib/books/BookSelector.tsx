@@ -11,7 +11,7 @@ export function BookSelector({
 }): ReactNode {
   return (
     <FieldList>
-      <Field>Book:</Field>
+      <Field>Kitap:</Field>
       <Field>
         <OptionList
           size={24}

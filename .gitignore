@@ -1,6 +1,12 @@
 # Configs
 .env*
 
+# Claude session data
+.claude/
+
+# Source PDFs (not needed in repo)
+scripts/katip-pdfs/
+
 # Keys
 id_*
 

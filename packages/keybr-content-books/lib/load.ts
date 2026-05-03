@@ -50,6 +50,14 @@ export async function loadContent(book: Book): Promise<Content> {
           { with: { type: "json" } }
         )
       ).default as any;
+      case Book.TR_KATIP:
+      return (
+        await import(
+          /* webpackChunkName: "book-tr-katip-metinleri" */
+          "./data/tr-katip-metinleri.json",
+          { with: { type: "json" } }
+        )
+      ).default as any;
     default:
       throw new Error();
   }

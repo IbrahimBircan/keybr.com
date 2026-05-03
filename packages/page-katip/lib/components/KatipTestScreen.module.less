@@ -1,0 +1,62 @@
+.container {
+  width: 80rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  opacity: 0.5;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.targetText {
+  border: 2px solid var(--primary-d2);
+  border-radius: 0.375rem;
+  padding: 1.25rem 2rem;
+  font-size: 1.2rem;
+  line-height: 2;
+  min-height: 14rem;
+  max-height: 22rem;
+  overflow-y: auto;
+  word-spacing: 0.15em;
+  scroll-behavior: smooth;
+  background-color: var(--primary-d1);
+}
+
+.inputArea {
+  border: 2px solid var(--primary-d2);
+  border-radius: 0.375rem;
+  padding: 1.25rem 2rem;
+  font-size: 1.2rem;
+  line-height: 2;
+  height: 12rem;
+  inline-size: 100%;
+  box-sizing: border-box;
+  resize: none;
+  background-color: var(--primary-l1);
+  color: inherit;
+  font-family: inherit;
+  outline: none;
+}
+
+.inputArea:focus {
+  border-color: var(--Value-color);
+  background-color: var(--primary-l2);
+}
+
+.wordCorrect {
+  color: var(--Value--more__color);
+}
+
+.wordIncorrect {
+  color: var(--error);
+  text-decoration: line-through;
+}
+
+.wordCurrent {
+  border-block-end: 2px solid currentColor;
+}

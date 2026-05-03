@@ -22,12 +22,12 @@ export type NamedDuration = {
 };
 
 export const durations: readonly NamedDuration[] = [
-  { label: "15 seconds", duration: duration_15_seconds },
-  { label: "30 seconds", duration: duration_30_seconds },
-  { label: "one minute", duration: duration_60_seconds },
-  { label: "100 characters", duration: duration_100_chars },
-  { label: "500 characters", duration: duration_500_chars },
-  { label: "1000 characters", duration: duration_1000_chars },
+  { label: "15 saniye", duration: duration_15_seconds },
+  { label: "30 saniye", duration: duration_30_seconds },
+  { label: "1 dakika", duration: duration_60_seconds },
+  { label: "100 karakter", duration: duration_100_chars },
+  { label: "500 karakter", duration: duration_500_chars },
+  { label: "1000 karakter", duration: duration_1000_chars },
 ];
 
 export function computeProgress(

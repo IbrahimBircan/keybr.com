@@ -39,14 +39,14 @@ function Content({ wordList }: { wordList: WordList }) {
   const { formatNumber } = useIntlNumbers();
   const { wordCount, avgWordLength } = wordListStats(wordList);
   return (
-    <FieldSet legend="Common words">
-      <Para>Type the common words.</Para>
+    <FieldSet legend="Yaygın kelimeler">
+      <Para>Yaygın kelimeleri yazın.</Para>
 
       <FieldList>
         <Field>
           {formatMessage({
             id: "t_Language:",
-            defaultMessage: "Language:",
+            defaultMessage: "Dil:",
           })}
         </Field>
 
@@ -70,7 +70,7 @@ function Content({ wordList }: { wordList: WordList }) {
         <Field>
           {formatMessage({
             id: "t_Word_list_size:",
-            defaultMessage: "Word list size:",
+            defaultMessage: "Kelime listesi boyutu:",
           })}
         </Field>
         <Field>
@@ -102,7 +102,7 @@ function Content({ wordList }: { wordList: WordList }) {
           <NameValue
             name={formatMessage({
               id: "t_num_Unique_words",
-              defaultMessage: "Unique words",
+              defaultMessage: "Benzersiz kelimeler",
             })}
             value={formatNumber(wordCount)}
           />
@@ -111,7 +111,7 @@ function Content({ wordList }: { wordList: WordList }) {
           <NameValue
             name={formatMessage({
               id: "t_Average_word_length",
-              defaultMessage: "Average word length",
+              defaultMessage: "Ortalama kelime uzunluğu",
             })}
             value={formatNumber(avgWordLength, 2)}
           />

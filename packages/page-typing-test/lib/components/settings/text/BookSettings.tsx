@@ -30,8 +30,8 @@ function Content({ bookContent }: { bookContent: BookContent }) {
   const book = settings.get(typingTestProps.book);
   const paragraphIndex = settings.get(typingTestProps.bookParagraphIndex);
   return (
-    <FieldSet legend="Book paragraphs">
-      <Para>Type the content of a book.</Para>
+    <FieldSet legend="Kitap paragrafları">
+      <Para>Bir kitabın içeriğini yazın.</Para>
 
       <BookSelector
         book={book}

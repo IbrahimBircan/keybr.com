@@ -31,6 +31,7 @@ const ProfilePage = lazy(() => import("./pages/profile.tsx"));
 const TypingTestPage = lazy(() => import("./pages/typing-test.tsx"));
 const TermsOfServicePage = lazy(() => import("./pages/terms-of-service.tsx"));
 const PrivacyPolicyPage = lazy(() => import("./pages/privacy-policy.tsx"));
+const KatipPage = lazy(() => import("./pages/katip.tsx"));
 
 export function App() {
   return (
@@ -153,6 +154,17 @@ function PageRoutes() {
             </Template>
           }
         />
+        <Route
+  path={Pages.katip.path}
+  element={
+    <Template path={Pages.katip.path}>
+      <Title page={Pages.katip} />
+      <Suspense fallback={<LoadingProgress />}>
+        <KatipPage />
+      </Suspense>
+    </Template>
+  }
+/>
         <Route
           path={Pages.termsOfService.path}
           element={

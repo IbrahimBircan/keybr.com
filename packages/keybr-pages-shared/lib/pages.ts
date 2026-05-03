@@ -228,7 +228,34 @@ export namespace Pages {
       },
     ],
   } satisfies PageInfo;
-
+export const katip = {
+  path: "/katip",
+  title: defineMessage({
+    id: "t_Katip",
+    defaultMessage: "Kâtip Sınavı",
+  }),
+  link: {
+    label: defineMessage({
+      id: "t_Katip",
+      defaultMessage: "Kâtip Sınavı",
+    }),
+    title: defineMessage({
+      id: "page.katip.description",
+      defaultMessage: "Adalet Bakanlığı kâtiplik sınav metinleri.",
+    }),
+    icon: mdiTrophyOutline,
+  },
+  meta: [
+    ...meta,
+    {
+      name: "description",
+      content: defineMessage({
+        id: "page.katip.description",
+        defaultMessage: "Adalet Bakanlığı kâtiplik sınav metinleri.",
+      }),
+    },
+  ],
+} satisfies PageInfo;
   export const layouts = {
     path: "/layouts",
     title: defineMessage({

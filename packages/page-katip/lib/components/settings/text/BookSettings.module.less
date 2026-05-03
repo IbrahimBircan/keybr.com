@@ -1,0 +1,20 @@
+.preview {
+  margin-block-start: 1rem;
+  padding: 1rem 1.25rem;
+  border: var(--separator-border);
+  border-radius: 0.375rem;
+  background-color: var(--primary-d1);
+  max-height: 16rem;
+  overflow-y: auto;
+}
+
+.previewParagraph {
+  margin: 0;
+  font-style: italic;
+  color: var(--text-color-f1);
+  line-height: 1.7;
+
+  & + & {
+    margin-block-start: 0.75rem;
+  }
+}
