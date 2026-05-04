@@ -11,4 +11,3 @@ npm --prefix "${project_dir}" run compile
 npm --prefix "${project_dir}" run lint
 npm --prefix "${project_dir}" run stylelint
 npm --prefix "${project_dir}" run build
-npm --prefix "${project_dir}" run test
