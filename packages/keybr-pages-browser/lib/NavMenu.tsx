@@ -6,13 +6,13 @@ import {
   usePageData,
 } from "@keybr/pages-shared";
 import { Icon } from "@keybr/widget";
+import { mdiTrophyOutline } from "@mdi/js";
 import { clsx } from "clsx";
 import { type ReactNode } from "react";
 import { useIntl } from "react-intl";
 import { NavLink } from "react-router";
 import * as styles from "./NavMenu.module.less";
 import { ThemeSwitcher } from "./themes/ThemeSwitcher.tsx";
-import { mdiTrophyOutline } from "@mdi/js";
 
 export function NavMenu({ currentPath }: { readonly currentPath: string }) {
   const { publicUser } = usePageData();
