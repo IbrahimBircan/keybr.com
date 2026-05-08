@@ -10,6 +10,7 @@
     "@keybr/page-account": "*",
     "@keybr/page-help": "*",
     "@keybr/page-highscores": "*",
+    "@keybr/page-katip": "*",
     "@keybr/page-layouts": "*",
     "@keybr/page-multiplayer": "*",
     "@keybr/page-practice": "*",
