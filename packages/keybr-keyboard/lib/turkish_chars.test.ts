@@ -1,8 +1,8 @@
 import { test } from "node:test";
 import { equal } from "rich-assert";
+import { KeyModifier } from "./keymodifier.ts";
 import { Layout } from "./layout.ts";
 import { loadKeyboard } from "./load.ts";
-import { KeyModifier } from "./keymodifier.ts";
 
 test("Turkish specific characters mapping", () => {
   const keyboard = loadKeyboard(Layout.TR_TR_Q);

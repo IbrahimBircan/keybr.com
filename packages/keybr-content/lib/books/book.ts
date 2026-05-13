@@ -1,11 +1,11 @@
 import { Language } from "@keybr/keyboard";
 import { Enum, type EnumItem } from "@keybr/lang";
 import coverImageEnAliceWonderland from "../../assets/cover-image-en-alice-wonderland.jpg";
+import coverImageTrKatip from "../../assets/cover-image-en-alice-wonderland.jpg";
 import coverImageEnCallWild from "../../assets/cover-image-en-call-wild.jpg";
 import coverImageEnJekyllHyde from "../../assets/cover-image-en-jekyll-hyde.jpg";
 import coverImageEsMarianela from "../../assets/cover-image-es-marianela.jpg";
 import coverImageFrAliceWonderland from "../../assets/cover-image-fr-alice-wonderland.jpg";
-import coverImageTrKatip from "../../assets/cover-image-en-alice-wonderland.jpg";
 
 export class Book implements EnumItem {
   static readonly EN_ALICE_WONDERLAND = new Book(
