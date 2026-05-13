@@ -8,9 +8,9 @@ import {
 import { DurationType, type KatipTestResult } from "../session/index.ts";
 import { type CompositeSettings, useCompositeSettings } from "../settings.ts";
 import { views } from "../views.tsx";
+import * as styles from "./KatipTestScreen.module.less";
 import { TestProgress } from "./TestProgress.tsx";
 import { Toolbar } from "./Toolbar.tsx";
-import * as styles from "./KatipTestScreen.module.less";
 
 export function KatipTestScreen() {
   return (

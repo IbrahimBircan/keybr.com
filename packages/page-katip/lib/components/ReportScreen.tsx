@@ -26,8 +26,8 @@ import {
 } from "@keybr/widget";
 import { mdiSkipNext } from "@mdi/js";
 import { type ReactNode } from "react";
-import { DurationType, type KatipTestResult } from "../session/index.ts";
 import { duration_3_minutes } from "../session/duration.ts";
+import { DurationType, type KatipTestResult } from "../session/index.ts";
 import { views } from "../views.tsx";
 import * as styles from "./ReportScreen.module.less";
 
