@@ -30,8 +30,8 @@ export enum Emulation {
 
 export const keyboardProps = {
   language: itemProp("keyboard.language", Language.ALL, Language.TR),
-layout: xitemProp("keyboard.layout", Layout.ALL, Layout.TR_TR_Q),
-geometry: itemProp("keyboard.geometry", Geometry.ALL, Geometry.ISO_102),
+  layout: xitemProp("keyboard.layout", Layout.ALL, Layout.TR_TR_Q),
+  geometry: itemProp("keyboard.geometry", Geometry.ALL, Geometry.ISO_102),
   zones: itemProp("keyboard.zones", ZoneMod.ALL, ZoneMod.STANDARD),
   emulation: enumProp("keyboard.emulation", Emulation, Emulation.Forward),
   colors: booleanProp("keyboard.colors", true),
